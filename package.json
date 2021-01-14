@@ -9,13 +9,12 @@
   "scripts": {
     "test": "node server",
     "build": "npm run build",
-
     "install-client": "cd client && npm install",
     "server": "nodemon server",
     "start": "node server.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\"  \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build"
   },
   "author": "mayank",
   "license": "ISC",
