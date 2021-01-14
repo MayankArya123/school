@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "test": "node server",
-    "build": "cd client && npm run build",
+    "build": "cd dashboard",
     "install-client": "cd client && npm install",
     "server": "nodemon server",
     "start": "node server.js",
