@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 
 const {MONGO_URI} = require('./Config/keys')
 
+const app = express()
 
  mongoose.connect(MONGO_URI,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true, useFindAndModify: false})
 
@@ -17,7 +18,7 @@ connection.once('open',()=>{
 })
 
 
- const app = express()
+
 
   app.use(cors())
   app.use(express.json())
@@ -35,6 +36,6 @@ if(process.env.NODE_ENV === 'production'){
 }
 
 
- const port= process.env.PORT || 8000
+ const port= process.env.PORT || 7000
 
  app.listen(port,console.log(`server running at ${port}`))
